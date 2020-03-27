@@ -50,6 +50,21 @@ class ScrapyAppPipeline(object):
 
     def process_item(self, item, spider):
 
+        # session = self.Session()
+
+        # quote = Quote()
+        # quote.job_data_id = spider.job_data_id
+        # quote.url_content = item["extracted_url"]
+
+        # try:
+        #     session.add(quote)
+        #     session.commit()
+        # except:
+        #     session.rollback()
+        #     raise
+        # finally:
+        #     session.close()
+
 
         if self.item_scraped_count % 10 == 0 and self.item_scraped_count < 6000:
 
