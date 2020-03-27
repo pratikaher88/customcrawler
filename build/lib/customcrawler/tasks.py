@@ -8,7 +8,7 @@ from customcrawler.models import db_connect
 
 
 
-app = Celery('customcrawler', broker='amqp://guest@localhost//')
+app = Celery('customcrawler', broker='amqp://')
 app.config_from_object(celeryconfig)
 
 session_retry = retry_session(retries=5)
